@@ -5,7 +5,7 @@
 //                                                                   //
 //     This file has been created by the Easy Configurator tool      //
 //                                                                   //
-//     Easy Configurator project LimitSwitchSlave.prj
+//     Easy Configurator project CustomSlave.prj
 //                                                                   //
 //-------------------------------------------------------------------//
 
