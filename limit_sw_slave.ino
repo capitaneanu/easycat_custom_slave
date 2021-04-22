@@ -174,14 +174,14 @@ float o_analog_03;
     if (g_ecat_state == MODE_OPERATIONAL)                          // if the slave is in operational
     {                                                             // manage the I/O
                            
-      o_digital_01 = EASYCAT.BufferOut.Cust.output_digital_01;                 // read the status of the display segments from the master
-      o_digital_02 = EASYCAT.BufferOut.Cust.output_digital_02;                 // read the status of the display segments from the master
-      o_digital_03 = EASYCAT.BufferOut.Cust.output_digital_03;                 // read the status of the display segments from the master
-      o_digital_04 = EASYCAT.BufferOut.Cust.output_digital_04;                 // read the status of the display segments from the master
-      o_digital_05 = EASYCAT.BufferOut.Cust.output_digital_05;                 // read the status of the display segments from the master
-      o_analog_01 = EASYCAT.BufferOut.Cust.output_analog_01;                   // read the status of the display segments from the master
-      o_analog_02 = EASYCAT.BufferOut.Cust.output_analog_02;                   // read the status of the display segments from the master
-      o_analog_03 = EASYCAT.BufferOut.Cust.output_analog_03;                   // read the status of the display segments from the master                                                    //
+      o_digital_01 = EASYCAT.BufferOut.Cust.output_digital_01;                 // read the status of the digital output from the master
+      o_digital_02 = EASYCAT.BufferOut.Cust.output_digital_02;                 // read the status of the digital output from the master
+      o_digital_03 = EASYCAT.BufferOut.Cust.output_digital_03;                 // read the status of the digital output from the master
+      o_digital_04 = EASYCAT.BufferOut.Cust.output_digital_04;                  // read the status of the digital output from the master
+      o_digital_05 = EASYCAT.BufferOut.Cust.output_digital_05;                  // read the status of the digital output from the master
+      o_analog_01 = EASYCAT.BufferOut.Cust.output_analog_01;                    // read the status of the digital output from the master
+      o_analog_02 = EASYCAT.BufferOut.Cust.output_analog_02;                    // read the status of the digital output from the master
+      o_analog_03 = EASYCAT.BufferOut.Cust.output_analog_03;                    // read the status of the digital output from the master                                                    //
                                            
       // read the analog inputs and filter the values
       i_analog_01 = ANALOG_INPUT_FILTER*i_analog_01 + (1.0-ANALOG_INPUT_FILTER)*analogRead(I_ANALOG_01_PIN);
@@ -206,7 +206,7 @@ float o_analog_03;
     }          
 
     else                                                          // if the slave is not in Operational
-    {                                                             // signal it on the display
+    {                                                             // signal it on the by flashing BUILT_IN_LED
 
       digitalWrite(BUILT_IN_LED,HIGH) ; 
       delay(500);                                                //
